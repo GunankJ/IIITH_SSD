@@ -1,0 +1,1 @@
+select Mgr_ssn, Dnumber, COUNT(*) from DEPENDENT INNER JOIN (select Mgr_ssn, DEPARTMENT.Dnumber from DEPARTMENT INNER JOIN DEPT_LOCATIONS ON DEPARTMENT.Dnumber=DEPT_LOCATIONS.Dnumber GROUP BY(DEPARTMENT.Dnumber) HAVING COUNT(Dlocation) > 2) as temp ON DEPENDENT.Essn=temp.Mgr_ssn GROUP BY(Essn);

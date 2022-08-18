@@ -1,0 +1,2 @@
+select Dname, DEPARTMENT.Dnumber, COUNT(Dlocation) from DEPARTMENT INNER JOIN DEPT_LOCATIONS ON DEPARTMENT.Dnumber=DEPT_LOCATIONS.Dnumber where DEPARTMENT.Dnumber in (select Dnumber
+from DEPARTMENT where Mgr_ssn in (select Essn from DEPENDENT where Sex="F" GROUP BY(Essn) HAVING count(Essn) > 1)) GROUP BY(Dnumber);
