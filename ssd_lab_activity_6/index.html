@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <div class="wrapper">
+        <h1 align="center">Team Form</h1>
+        <div class="content" role="main">
+        
+        <div class="teamform">
+            <form>
+                <table id="TeamForm">
+                    <tr>
+                        <td><label for="mgrname">Manager Name</label></td>
+                        <td><input type="text" id="mgrname" name="mgrname" required></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                        <label for="grpemail">Group Email</label>
+                        </td>
+                        <td>
+                        <input type="email" id="grpemail" name="grpemail" required>
+                        </td>
+                    </tr>
+                    <br>
+    
+                    <tr>
+                        <td>
+                            <label for="svrname">Server  Username</label>
+                        </td>
+                        <td>
+                            <input type="text" id="svrname" name="svrname" onkeyup="usernameValidationHandler()" required>
+                        </td>
+                        <label id="err-usrname"></label>
+                    </tr>
+                    <br>
+    
+                    <tr>
+                        <td>
+                            <label for="svrpass">Server  Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="svrpass" name="svrpass" required>
+                        </td>
+                    </tr>
+                    <br>
+    
+                    <tr>
+                        <td>
+                            <label for="cfmpass">Confirm  Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="cfmpass" name="cfmpass" onblur="return passwordHandler()" required>
+                        </td>
+                    </tr>
+                    <br>
+    
+                    <tr>
+                        <td>
+                            <label for="teamlead">Team Lead</label>
+                        </td>
+                        <td>
+                            <select id="teamlead" name="teamlead">
+                                <option value="varun">Varun</option>
+                                <option value="tarun">Tarun</option>
+                                <option value="yash">Yash</option>
+                                <option value="gaurav">Gaurav</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <br>
+                    
+    
+                    <tr>
+                        <td>
+                            <label for="teammembers">Team Members</label>
+                        </td>
+                        <td>
+                                <div class="droptarget-div"
+                                    ondragover="dragoverHandler(event)"
+                                    ondrop="dropHandler(event)">
+        
+                                    <p id="dragtarget-div1"
+                                        ondragstart="dragstartHandler(event)"
+                                        draggable="true" style="background-color: teal; color: aliceblue;">
+                                        Abhishek!!
+                                    </p>
+                                    <p id="dragtarget-div2"
+                                        ondragstart="dragstartHandler(event)"
+                                        draggable="true" style="background-color: teal; color: aliceblue;">
+                                        Tarun!!
+                                    </p>
+                                    <p id="dragtarget-div3"
+                                        ondragstart="dragstartHandler(event)"
+                                        draggable="true" style="background-color: teal; color: aliceblue;">
+                                        Madhur!!
+                                    </p>
+                                    <p id="dragtarget-div4"
+                                        ondragstart="dragstartHandler(event)"
+                                        draggable="true" style="background-color: teal; color: aliceblue;">
+                                        Dheeresh!!
+                                    </p>
+                                </div>
+                        </td>
+                        <td>
+                            <div class="droptarget-div"
+                                ondragover="dragoverHandler(event)"
+                                ondrop="dropHandler(event)">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <input type="submit" value="Submit" style="height: 30px; width: 75px; background-color:darkslategray; color: aliceblue; border-radius: 5px;">
+            </form>
+        </div>
+        </div> 
+        <!-- </div> -->
+        
+      </div>
+    </div>
+  </body>
+</html>

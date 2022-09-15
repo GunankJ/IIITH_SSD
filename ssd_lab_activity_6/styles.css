@@ -1,0 +1,31 @@
+body {
+    font-family: Monospace;
+    font-size: 15px;
+    color: black;
+    background-color: white;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    margin-top: 10%;
+  }
+
+  .teamform {
+    font-family: Calibri;
+  }
+
+  .wrapper {
+    height: 200px;
+    position: relative;
+  }
+
+  .droptarget-div{
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+
